@@ -40,39 +40,34 @@
 											
 											<div class="form-group" id="name">
 												<span class="help-block"><b>Full Name</b></span>
-												<input type="text" class="form-control" name="name" value="" onmouseleave="perform('name')">
+												<input type="text" class="form-control" name="name" value="" ontextchanged="perform('name')" onmouseleave="perform('name')">
 		                                        <br>
 											</div>
-											<div class="form-group" id="type" onmouseleave="perform('type')">
-												<div class="radio">
-													<label>
-														<input type="radio" name="type" value="student"> Student
-													</label>
-												</div>
-												<div class="radio">
-													<label>
-														<input type="radio" name="type" value="staff"> Staff
-													</label>
-												</div>
-												<br>
-												<br>
+											<div class="form-group" id="type">
+												<span class="help-block">
+													<b>Type</b>
+												</span>
+												<select class="form-control" name="type" style="width: 100%; height: 45px;" ontextchanged="perform('type')" onmouseleave="perform('type')"> 
+													<option class="blue" value="student" > Student </option>
+													<option class="blue" value="staff"> Staff  </option>
+												</select>
 												<br>
 											</div>
-											<div class="form-group" id="matricNo" onmouseleave="perform('matricNo')">
+											<div class="form-group" id="matricNo">
 												<span class="help-block"><b>Matric No</b></span>
-												<input type="text" class="form-control" name="matricNo" value="">
+												<input type="text" class="form-control" name="matricNo" value="" ontextchanged="perform('matricNo')" onmouseleave="perform('matricNo')">
 		                                        <br>
 											</div>
 											<div class="form-group" id="staffId">
 												<span class="help-block"><b>Staff ID</b></span>
-												<input type="text" class="form-control" name="staffId" required="" value="">
+												<input type="text" class="form-control" name="staffId" required="" value="" ontextchanged="perform('staffId')" onmouseleave="perform('staffId')">
 		                                        <br>
 											</div>
 											<div class="form-group" id="faculty">
 												<span class="help-block">
 													<b>Faculty</b>
 												</span>
-												<select class="form-control" name="faculty" style="width: 100%; height: 45px;">
+												<select class="form-control" name="faculty" style="width: 100%; height: 45px;" ontextchanged="perform('faculty')" onmouseleave="perform('faculty')">
 													<option class="blue" value="arts"> Arts </option>
 													<option class="blue" value="busAdmin"> Business Administration  </option>
 													<option class="blue" value="education"> Education </option>
@@ -85,14 +80,8 @@
 												<span class="help-block">
 													<b>Department</b>
 												</span>
-												<select class="form-control" name="department" style="width: 100%; height: 45px;">
-													<div id="dept">
-														<option class="blue" value="arts"> Arts </option>
-														<option class="blue" value="busAdmin"> Business Administration </option>
-														<option class="blue" value="education"> Education </option>
-														<option class="blue" value="engineering"> Engineering </option>
-														<option class="blue" value="science"> Science </option>
-													</div>
+												<select class="form-control" id="dept" name="department" style="width: 100%; height: 45px;" ontextchanged="perform('department')" onmouseleave="perform('department')">
+													
 												</select>
 												<br>
 											</div>
@@ -100,14 +89,14 @@
 												<span class="help-block">
 													<b>Email</b>
 												</span>
-												<input type="text" class="form-control" name="email" value="">
+												<input type="text" class="form-control" name="email" value="" ontextchanged="perform('email')" onmouseleave="perform('email')">
 												<br>
 											</div>
 											<div class="form-group" id="maritalStat">
 												<span class="help-block">
 													<b>Marital Status</b>
 												</span>
-												<select class="form-control" name="maritalStat" style="width: 100%; height: 45px;">
+												<select class="form-control" name="maritalStat" style="width: 100%; height: 45px;" ontextchanged="perform('maritalStat')" onmouseleave="perform('maritalStat')">
 													<option class="blue" value="single"> Single </option>
 													<option class="blue" value="married"> Married </option>
 													<option class="blue" value="divorced"> Divorced </option>
@@ -119,7 +108,8 @@
 												<span class="help-block">
 													<b>Number Of Children</b>
 												</span>
-												<select class="form-control" name="numChild" style="width: 100%; height: 45px;">
+												<select class="form-control" name="numChild" style="width: 100%; height: 45px;" ontextchanged="perform('numChild')" onmouseleave="perform('numChild')">
+													<option class="blue" value="0"> 0 </option>
 													<option class="blue" value="1"> 1 </option>
 													<option class="blue" value="2"> 2 </option>
 													<option class="blue" value="3"> 3 </option>
@@ -128,54 +118,23 @@
 												</select>
 												<br>
 											</div>
-											<div class="form-group" id="children">
-												<span class="help-block"><b>Full Name of Each Child</b></span>
-												<div id="childName">
-												<input type="text" class="form-control" value="">
-		                                        <br>
-											</div>
 											<div class="form-group" id="gender">
-												<div class="radio">
-													<label>
-													  <input type="radio" name="gender" required="" value="male">
-													  Female
-													</label>
-												</div>
-												<div class="radio">
-													<label>
-													<input type="radio" name="gender" required="" value="female">
-													Male
-													</label>
-												</div>
-		                                        <br>
-		                                        <br>
-		                                        <br>
+												<span class="help-block">
+													<b>Gender</b>
+												</span>
+												<select class="form-control" name="gender" style="width: 100%; height: 45px;" ontextchanged="perform('gender')" onmouseleave="perform('gender')">
+													<option class="blue" value="male">Male </option>
+													<option class="blue" value="female"> Female </option>
+												</select>
+												<br>
 											</div>
 											<div class="form-group" id="dob">
 												<span class="help-block"><b>Date Of Birth</b></span>(yyyy/mm/dd)
-												<input type="date" class="form-control" name="dob" placeholder="mm/dd/yyyy" value="">
+												<input type="date" class="form-control" name="dob" placeholder="mm/dd/yyyy" value="" ontextchanged="perform('dob')" onmouseleave="perform('dob')">
 		                                        <br>
 											</div>
-											<div class="form-group" id="conditions">
-												<span class="help-block">Conditions you may be suffering:</span>
-												<div id="condition">
-													<div class="radio">
-														<label>
-															<input type="checkbox" name="condition[]" value="malaria"> Malaria
-														</label>
-													</div><br>
-													<div class="radio">
-														<label>
-															<input type="checkbox" name="condition[]" value="fever"> Fever
-														</label>
-													</div>
-												</div>
-												<br>
-												<br>
-												<br>
-											</div>
 											<div class="form-group">
-												<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+												<a href="#" id="submit" onclick="submit()" class="btn">Submit</a>
 											</div>
 											 <div class="clearfix"> </div>
 										</form>
